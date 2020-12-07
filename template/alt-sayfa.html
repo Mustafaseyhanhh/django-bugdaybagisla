@@ -1,0 +1,68 @@
+{% extends 'default.html' %}
+
+{%load staticfiles %}
+{% block content %}
+
+
+<div class="row">
+  <div class="col-xs-12 col-sm-12  col-md-12 col-lg-4">
+    <div class="card">
+   </div>
+  </div>
+<div class="col-xs-12 col-sm-12  col-md-12 col-lg-4">
+    <div class="card">
+    <div class="card-body login-card-body">
+    <h3><b>{{baslik}}</b></h3>
+<p>{{icerik}}
+</p>
+</div></div>
+  </div>
+  <div class="col-xs-12 col-sm-12  col-md-12 col-lg-4">
+    <div class="card">
+
+  </div></div>
+  <div class="col-xs-12 col-sm-12  col-md-12 col-lg-4">
+    <div class="card">
+
+  </div></div>
+  <div class="col-xs-12 col-sm-12  col-md-12 col-lg-4">
+    <div class="card">
+    <div class="card-body login-card-body">
+    <a href="/"><button type="button" class="btn btn-block btn-warning btn-lg">Çözmeye Başla</button></a>
+</p>
+</div></div>
+  </div>
+  <div class="col-xs-12 col-sm-12  col-md-12 col-lg-4">
+    <div class="card">
+
+  </div></div><div class="col-xs-12 col-sm-12  col-md-12 col-lg-4">
+    <div class="card">
+
+  </div></div>
+  <div class="col-xs-12 col-sm-12  col-md-12 col-lg-4">
+    <div class="card">
+    <div class="card-body login-card-body">
+    <h5>Etiketler:</h5>
+<p style="font-size:12px;">
+{%for i in etiketler%}
+{{i}},
+{%endfor%}
+</p>
+</div></div>
+  </div>
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

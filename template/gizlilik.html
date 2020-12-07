@@ -1,0 +1,70 @@
+{% extends 'default.html' %}
+{%load staticfiles %}
+{% block content %}
+  <div class="row">
+    <div class="col-xs-12 col-sm-12  col-md-12 col-lg-3">
+      <div class="card">
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12  col-md-12 col-lg-6">
+      <div class="card">
+        <div class="card-body login-card-body">
+
+<center><h3> Gizlilik Sözleşmesi</h3></center>
+<ol>
+<li style="font-weight: 400;"><strong>Topladığımız Bilgiler</strong><strong><br /></strong><span style="font-weight: 400;">Hizmetimizi sağlamak ve geliştirmek, Hizmeti kullanımınızı y&ouml;netmek ve Hizmetimizin tadını &ccedil;ıkarmanız ve kolayca gezinmeniz i&ccedil;in bilgi toplarız.</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">Hizmeti kullandığınızda veya uygulamayı indirme, servis veya bilgi isteme veya doğrudan bizimle iletişim kurma gibi belirli faaliyetlerde bulunduğunuzda, aşağıdaki bilgi t&uuml;rlerinin bir kısmını veya tamamını vermenizi isteyebilir:</span></li>
+<ul>
+<li style="font-weight: 400;"><strong>Uygulamayı y&uuml;kleme:</strong><span style="font-weight: 400;"> Hizmeti Hesapsız kullanıyorsanız, kişisel bilgiler girmezsiniz (l&uuml;tfen otomatik olarak toplanan bilgiler i&ccedil;in aşağıya bakın). Giriş kimlik bilgilerinizi Facebook gibi &uuml;&ccedil;&uuml;nc&uuml; taraf hizmet hesaplarınızdan birinin kullanarak bir Hesap oluşturursanız, genel profil bilgilerinizi (ad, profil resmi) ve e-posta adresinizi paylaşırsınız. E-posta tabanlı bir hesap oluşturursanız, kullanıcı adınızı ve e-posta adresinizi isteyip size bir doğrulama e-postası g&ouml;ndereceğiz.</span></li>
+<li style="font-weight: 400;"><strong>Bizimle iletişim:</strong><span style="font-weight: 400;"> Hizmetimiz hakkında bilgi almayı tercih ettiğinizde, Bugdaybagisla b&uuml;ltenine kaydolurken, m&uuml;şteri veya teknik destek alma talebinde bulunduğunuzda veya doğrudan bizimle iletişime ge&ccedil;tiğinizde, e-posta adresi, adınız ve soyadınız gibi kişisel bilgileri toplayabiliriz. veya &Uuml;&ccedil;&uuml;nc&uuml; Şahıslar aracılığıyla.</span></li>
+<li style="font-weight: 400;"><strong>Kullanıcı tarafından oluşturulan i&ccedil;erik:</strong><span style="font-weight: 400;"> Gruplar gibi belirli i&ccedil;erikleri &ouml;zelleştirebilir ve oluşturabilirsiniz.</span></li>
+</ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Bize sağlamayı se&ccedil;tiğiniz bilgilere ek olarak, biz ve servis sağlayıcılarımız belirli ek bilgileri otomatik olarak toplamak i&ccedil;in standart teknolojileri de kullanıyoruz:</span></li>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Hizmetimizi nasıl kullandığınızla ilgili belirli bilgileri otomatik olarak kaydederiz. İnternet, işletim sistemi, &uuml;lke, diller ve yerel ayarlar, donanıma eriştiğinizde, kullanıcının İnternet Protokol&uuml; (IP) adresi, &ccedil;erez tanımlayıcıları, Reklamveren Kimliği ve bilgisayarınıza veya cihazınıza otomatik olarak atanan diğer cihaz tanımlayıcıları gibi bilgileri i&ccedil;erebilir. Servisimizin sayfalarına veya &ouml;zelliklerine g&ouml;z attığınız ve bu sayfalara veya &ouml;zelliklere harcanan s&uuml;reyi, Hizmetlerimizdeki tıkladığınız bağlantıları ve diğer istatistikleri yazın. Hizmeti y&ouml;netmek i&ccedil;in bu verileri kullanırız ve &ouml;zellikleri ve işlevselliği genişleterek ve onları bireylerin ihtiya&ccedil;larına ve tercihlerine g&ouml;re d&uuml;zenleyerek Hizmetimizi geliştirmek, &ouml;zelleştirmek ve geliştirmek i&ccedil;in bu verileri analiz eder (ve analiz etmek i&ccedil;in &uuml;&ccedil;&uuml;nc&uuml; tarafları dahil edebiliriz).</span></li>
+</ul>
+<li style="font-weight: 400;"><strong>Diğer Kaynaklardan Bilgiler</strong><strong><br /></strong><span style="font-weight: 400;">Sizinle ilgili &uuml;&ccedil;&uuml;nc&uuml; şahıslardan bilgi alabiliriz. &Ouml;rneğin, Hizmetlerimize App Store / Google Play Store veya bir Sosyal Ağ Hizmeti (&ldquo;SNS&rdquo;) gibi &uuml;&ccedil;&uuml;nc&uuml; bir tarafın bir uygulaması aracılığıyla erişirseniz, sizinle ilgili &uuml;&ccedil;&uuml;nc&uuml; taraf uygulamasından bu t&uuml;r bilgileri toplayabiliriz. Buradaki gizlilik ayarlarınız aracılığıyla herkese a&ccedil;ık hale geldiniz. &Uuml;&ccedil;&uuml;nc&uuml; taraf uygulamaları aracılığıyla topladığımız bilgiler adınızı, SNS kullanıcı kimlik numaranızı, SNS kullanıcı adınızı, profil resminizi ve e-posta adresinizi i&ccedil;erebilir.</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">İzniniz olmadan bir SNS'ye hi&ccedil;bir şey g&ouml;ndermeyiz.</span></li>
+<li style="font-weight: 400;"><strong>Bilgilerinizi Nasıl Kullanıyoruz?</strong><strong><br /></strong><span style="font-weight: 400;">Aşağıdakiler dahil &ccedil;eşitli iş ama&ccedil;ları i&ccedil;in kişisel bilgiler edinir, saklar, kullanır ve işleriz:</span></li>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Hizmet ile ilgili deneyiminizi sağlamak, &ouml;rneğin, Hizmetle ilgili veya Hizmetin dışında Hizmetle ilgili &ouml;zelleştirilmiş, kişiselleştirilmiş veya yerel i&ccedil;erik, tavsiyeler, &ouml;zellikler ve reklamlar sağlayarak;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Hizmetin teknik işlevselliğini sağlamak, yeni &ouml;zellikler ve hizmetler geliştirmek ve mobil uygulama, reklamcılık, &uuml;r&uuml;nler ve Hizmet aracılığıyla sunulan, bağlantılı veya sunulan hizmetler ile etkileşimleriniz de dahil olmak &uuml;zere Hizmet kullanımınızı analiz etmek;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">e-postalar, bildirimler veya almayı kabul ettiğiniz diğer iletiler dahil olmak &uuml;zere Hizmetle ilgili veya araştırma ama&ccedil;lı sizinle iletişim kurmak;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">doğrudan veya ortaklarımızdan biri aracılığıyla, bize iletmiş olabileceğiniz herhangi bir izinle tutarlı olarak e-postalar, bildirimler veya diğer iletiler yoluyla pazarlama ve tanıtım amacıyla iletişim kurmak; Aşağıdaki Kullanıcı Girişi ve Kontrol&uuml; b&ouml;l&uuml;m&uuml;nde, belirli mesajları almaktan vazge&ccedil;mek i&ccedil;in kullanabileceğiniz kontrolleri size bildiririz;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Hizmetin &ouml;zellikleri ve i&ccedil;eriği ile Hizmet aracılığıyla sunulan &uuml;r&uuml;n ve hizmetler de dahil olmak &uuml;zere Hizmetin i&ccedil;inde veya dışında Hizmetin ve diğer ilgili hizmetlerin veya &uuml;r&uuml;nlerin etkinleştirilmesi ve tanıtılması.</span></li>
+</ul>
+<li style="font-weight: 400;"><strong>Kişisel Bilgilerin &Uuml;&ccedil;&uuml;nc&uuml; Taraflarla Paylaşılması</strong><strong><br /></strong><span style="font-weight: 400;">Hizmete Facebook ile bağlandığınızda, aşağıdaki kişisel bilgiler Hizmette herkese a&ccedil;ık olacaktır: Facebook kullanıcı adınız (adınızı ve soyadınızı da i&ccedil;erebilir). Bir hesap bağlamak veya oluşturmak i&ccedil;in kullandığınız y&ouml;ntemden bağımsız olarak, Hizmet &uuml;zerindeki kullanıcı adınızı istediğiniz zaman değiştirebilirsiniz.</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">Hizmeti sağlamak i&ccedil;in ihtiya&ccedil; duyduğumuz teknik altyapıyı işletebilecek teknik servis sağlayıcıları, &ouml;zellikle uygulamayı, i&ccedil;eriğini ve işlediğimiz verileri barındıran, depolayan, y&ouml;neten ve bakımını yapan sağlayıcıları kullanıyoruz.</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">Bu Politikanın &ldquo;Bilgileri nasıl kullanıyoruz&rdquo; b&ouml;l&uuml;m&uuml;nde a&ccedil;ıklandığı şekilde sizinle iletişim kurmamıza yardımcı olmak i&ccedil;in teknik servis sağlayıcıları kullanıyoruz.</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">Size daha iyi tasarlanmış i&ccedil;erik sunmak veya size daha iyi hizmet sunabilmek i&ccedil;in Hizmeti kullanımınızı anlamamıza yardımcı olmak i&ccedil;in pazarlama ve reklam ortaklarını kullanıyoruz. Size, Hizmetle ilgili tanıtım iletişimleri g&ouml;ndermek i&ccedil;in kişisel bilgileri belirli pazarlama ve reklam ortaklarıyla paylaşabiliriz.</span></li>
+<li style="font-weight: 400;"><strong>&Ccedil;erezler, &Uuml;&ccedil;&uuml;nc&uuml; Taraf Yazılım Geliştirme Kitleri ve Takibi</strong><strong><br /></strong><span style="font-weight: 400;">Tanımlama bilgisi, Kullanıcının cihazında depolanan ve cihaz hakkında bilgiler i&ccedil;eren bir veri par&ccedil;asıdır. &Ccedil;erez kullanımı, Hizmeti kullanırken hi&ccedil;bir şekilde kişisel olarak tanımlanabilir bilgilere bağlı değildir. Bir &ccedil;erez kurarak, Freerice, Servisi bir dahaki ziyaretinde Kullanıcı'yı hatırlayacaktır. Kullanıcı, tarayıcısı izin verirse &ccedil;erezlerimizi reddetmekte her zaman &ouml;zg&uuml;rd&uuml;r, ancak bu durumda Hizmetin belirli &ouml;zelliklerini kullanamayabilir ve bilgilerin bazı &ouml;zelliklerini kullanmak i&ccedil;in daha sık girmesi gerekebilir. hizmet.</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">Hizmetimizin işlevselliğinin bir par&ccedil;ası olarak &uuml;&ccedil;&uuml;nc&uuml; taraf yazılım geliştirme kitlerini (&ldquo;SDK&rdquo;) kullanıyoruz. &Uuml;&ccedil;&uuml;nc&uuml; taraf SDK'ları, sizinle daha alakalı i&ccedil;erik sağlamak i&ccedil;in reklam verenler dahil &uuml;&ccedil;&uuml;nc&uuml; tarafların kişisel bilgilerinizi toplamasına izin verebilir.</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">Google LLC tarafından işletilen bir analiz hizmeti olan Google Analytics'i kullanıyoruz (1600 Amphitheatre Parkway Mountain View, CA 94043, ABD, &ldquo;Google&rdquo;). Bu ama&ccedil;la, web sayfalarımızı ziyaret ettiğinizde Google cihazınıza bir &ccedil;erez yerleştirir. Bu, tarayıcınızı tanımayı ve web sayfalarımızı kullanımımızı bizim adımıza analiz etmeyi m&uuml;mk&uuml;n kılar.</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">Google, web sitenizin kullanımına ilişkin veriler ABD&rsquo;ye g&ouml;nderilmeden &ouml;nce normal olarak IP adresinizi AB&rsquo;de veya A&Ccedil;A&rsquo;da anonimleştirir. Google, makul d&uuml;zeyde bir veri koruması sağlamak i&ccedil;in kişisel verilerin ABD'ye iletildiği istisnai durumlar i&ccedil;in AB-ABD Gizlilik Kalkanı'na başvurmuştur. Daha ayrıntılı bilgi burada bulunabilir: </span><a href="https://www.privacyshield.gov/EU-US-Framework"><span style="font-weight: 400;">https://www.privacyshield.gov/EU-US-Framework</span></a><span style="font-weight: 400;"> . Tarayıcınızdan Google Analytics ile bağlantılı olarak iletilen IP adresi, diğer Google verileri ile birleştirilmemiş.</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">Google&rsquo;ın sunduğu eklentiyi y&uuml;kleyerek verilerinizin kullanımını istediğiniz zaman &ouml;nleyebilirsiniz. Bu eklenti şu adreste mevcuttur: </span><a href="https://tools.google.com/dlpage/gaoptout"><span style="font-weight: 400;">https://tools.google.com/dlpage/gaoptout</span></a><span style="font-weight: 400;"> .</span></li>
+<li style="font-weight: 400;"><strong>Veri Saklama</strong><strong><br /></strong><span style="font-weight: 400;">Verileri, meşru ticari veya yasal ama&ccedil;larla tutulması gerektiğinde, sınırlı s&uuml;re boyunca saklarız.</span></li>
+<li style="font-weight: 400;"><strong>G&uuml;venlik</strong><strong><br /></strong><span style="font-weight: 400;">Kişisel verilerinizi yetkisiz erişime ve suiistimallere karşı korumak i&ccedil;in teknik ve kurumsal g&uuml;venlik &ouml;nlemleri aldık. Bu g&uuml;venlik &ouml;nlemlerini d&uuml;zenli olarak kontrol ediyor ve gerektiğinde teknolojik gelişme durumuna uyarlıyoruz. Altyapımız HTTPS &uuml;zerinden sunulmaktadır; akıllı telefonunuz veya web tarayıcınız yalnızca sunucumuzla g&uuml;venli bir kanal &uuml;zerinden iletişim kurar.</span></li>
+<li style="font-weight: 400;"><strong>Değişikliklerin Bildirilmesi</strong><strong><br /></strong><span style="font-weight: 400;">Bu gizlilik politikası zaman zaman değişebilir. Değişiklikler Hizmet i&ccedil;inde yayınlanacak ve b&ouml;ylece Kullanıcılar hangi bilgilerin toplandığını ve nasıl kullanıldığını her zaman bilirler. L&uuml;tfen b&ouml;yle bir bildirimi dikkatlice okuduğunuzdan emin olun. Hizmeti, Gizlilik Politikası'nın yeni s&uuml;r&uuml;m&uuml; altında kullanmaya devam etmek istemiyorsanız, l&uuml;tfen bize ulaşın .</span></li>
+</ol>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12  col-md-12 col-lg-3">
+      <div class="card">
+      </div></div>
+      <div class="col-xs-12 col-sm-12  col-md-12 col-lg-4">
+        <div class="card">
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12  col-md-12 col-lg-4">
+        <div class="card">
+          <div class="card-body login-card-body">
+            <a href="/"><button type="button" class="btn btn-block btn-warning btn-lg">Çözmeye Başla</button></a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12  col-md-12 col-lg-4">
+      <div class="card">
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12  col-md-12 col-lg-4">
+      <div class="card">
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

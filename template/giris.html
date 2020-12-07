@@ -1,0 +1,83 @@
+{% extends 'default.html' %}
+
+{%load staticfiles %}
+{% block content %}
+
+
+<div class="row">
+  <div class="col-xs-12 col-sm-12  col-md-12 col-lg-4 msac">
+
+  </div>
+  <div class="col-xs-12 col-sm-12  col-md-12 col-lg-4">
+    {%if ok == 1%}
+      <div class="alert alert-danger alert-dismissible" >
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <h5><i class="icon fas fa-ban"></i> Hata!</h5>
+        Kullanıcı adı yada şifreniz hatalı.
+      </div>
+      {%endif%}
+   <div class="card">
+    <div class="card-body login-card-body">
+      <p class="login-box-msg">Giriş yaparak geçmişi takip edebilirsiniz.</p>
+
+      <form action="/giris-form" method="post">{% csrf_token %}
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Kullanıcı Adı" required="" name="kadi">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="password" class="form-control" placeholder="Şifre" required="" name="sifre">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary btn-block">Giriş Yap</button>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
+
+      <div class="social-auth-links text-center mb-3">
+        <p>- VEYA -</p>
+        <a href="/uye-ol" class="btn btn-block btn-danger">
+         <i class="far fa-smile"></i> Üye Ol
+        </a>
+      </div>
+      <!-- /.social-auth-links -->
+
+      <p class="mb-1">
+        <a href="">Şifremi unuttum</a>
+      </p>
+
+    </div>
+    <!-- /.login-card-body -->
+  </div>
+    
+  </div>
+  <div class="col-xs-12 col-sm-12  col-md-12 col-lg-4">
+
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

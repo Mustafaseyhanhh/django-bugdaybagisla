@@ -1,0 +1,58 @@
+{% extends 'default.html' %}
+{%load staticfiles %}
+{% block content %}
+  <div class="row">
+    <div class="col-xs-12 col-sm-12  col-md-12 col-lg-4">
+      <div class="card">
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12  col-md-12 col-lg-4">
+      <div class="card">
+        <div class="card-body login-card-body">
+<br>
+{{soru.soru}}
+
+<br><br><br>
+<button type="button" class="btn btn-block btn-success btn-lg">{{soru.sik_1}}</button>
+<button type="button" class="btn btn-block btn-danger btn-lg">{{soru.sik_2}}</button>
+<button type="button" class="btn btn-block btn-danger btn-lg">{{soru.sik_3}}</button>
+<button type="button" class="btn btn-block btn-danger btn-lg">{{soru.sik_4}}</button>
+<br><br>
+<div class="row">
+  <div class="col-xs-4 col-sm-4  col-md-4 col-lg-4">
+  </div>
+  <div class="col-xs-4 col-sm-4  col-md-4 col-lg-4">
+  </div>
+  <div class="col-xs-4 col-sm-4  col-md-4 col-lg-4">
+    <a href="/random-soru"><button type="button" class="btn btn-block btn-primary btn-lg">Random Soru</button></a>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12  col-md-12 col-lg-4">
+      <div class="card">
+      </div></div>
+      <div class="col-xs-12 col-sm-12  col-md-12 col-lg-4">
+        <div class="card">
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12  col-md-12 col-lg-4">
+        <div class="card">
+          <div class="card-body login-card-body">
+            <a href="/"><button type="button" class="btn btn-block btn-warning btn-lg">Çözmeye Başla</button></a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12  col-md-12 col-lg-4">
+      <div class="card">
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12  col-md-12 col-lg-4">
+      <div class="card">
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,162 @@
+{% extends 'default.html' %}
+
+{%load staticfiles %}
+{% block content %}
+
+
+<div class="row">
+  <div class="col-xs-12 col-sm-12  col-md-12 col-lg-4 msac">
+    <div class="row">
+      
+      <div class="col-xs-12 col-sm-12  col-md-12 col-lg-12" style="padding-bottom: 20px; ">
+        <div class="position-relative p-3 bg-gray" style="height: 180px; max-width: 400px; margin: auto;">
+          <div class="ribbon-wrapper ribbon-xl">
+            <div class="ribbon bg-warning text-lg">
+              Toplam
+            </div>
+          </div>
+          <small>Buğday:{{ayarlar.toplam}} </small><br>
+          <small>Çözülen soru: {{ayarlar.cozulen_soru}}</small><br>
+          <small>Ziyaretçi: {{ayarlar.toplam_ziyaretci}}</small><br>
+          <small>Soru: {{ayarlar.toplam_soru_sayisi}}</small><br>
+          <small>Kullanıcı: {{toplan_kullanici}}</small>
+        </div>
+      </div>
+      {%if request.session.log%}
+      <div class="col-xs-12 col-sm-12  col-md-12 col-lg-12" style="padding-bottom: 20px; ">
+        <div class="position-relative p-3 bg-gray" style="height: 180px; max-width: 400px; margin: auto;">
+          <div class="ribbon-wrapper ribbon-xl">
+            <div class="ribbon bg-warning text-lg">
+              Üyelik Toplam
+            </div>
+          </div>
+          Scor Tablonuz  <br> <br>
+          <small>Kullanıcı Adı: {%if user%}{{user.nick_name}}{%else%}0{%endif%}</small><br>
+          <small>Buğday: {%if user%}{{user.bugday}}{%else%}0{%endif%}</small><br>
+          <small>Doğru çözülen Soru: {%if user%}{{user.cozulen_soru}}{%else%}0{%endif%}</small><br>
+        </div>
+      </div>
+      {%endif%}
+      <div class="col-xs-12 col-sm-12  col-md-12 col-lg-12" style="padding-bottom: 20px; ">
+        <div class="position-relative p-3 bg-gray" style="height: 180px; max-width: 400px; margin: auto;">
+          <div class="ribbon-wrapper ribbon-xl">
+            <div class="ribbon bg-warning text-lg">
+              Günlük Toplam
+            </div>
+          </div>
+          Günlük <br> <br>
+          <small>Buğday:{{ayarlar.gunluk_toplam}} </small><br>
+          <small>Çözülen soru: {{ayarlar.gunluk_cozulen_soru}}</small><br>
+          <small>Ziyaretçi: {{ayarlar.gunluk_ziyaretci}}</small><br>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-12  col-md-12 col-lg-4">
+    <div class="card" id="soru_panel">
+      
+      <!-- /.card-header -->
+      <div style="display: none;" id="soruid" data-value="{{sid}}">{{sid}}</div>
+      <div style="display: none;" id="kid" data-value="{{k}}">{{k}}</div>
+      <div class="card-body clearfix">
+        <blockquote class="quote-secondary">
+          <center><p id="soru_1">{{sorular.soru}}</p></center>
+        </blockquote>
+      </div>
+      <div style="margin-left: 20px;margin-right: 20px;" id="butonlar">
+        <button type="button" id="button_1" class="btn btn-block btn-outline-secondary btn-lg" style="max-width: 400px;margin: auto; margin-bottom: 15px;" value="{{sorular.sik_1}}" onclick="sesese(this.id,this.value)">{{sorular.sik_1}}</button>
+        <button type="button" id="button_2" class="btn btn-block btn-outline-secondary btn-lg" style="max-width: 400px;margin: auto; margin-bottom: 15px;" value="{{sorular.sik_2}}"onclick="sesese(this.id,this.value)">{{sorular.sik_2}}</button>
+        <button type="button" id="button_3" class="btn btn-block btn-outline-secondary btn-lg" style="max-width: 400px;margin: auto; margin-bottom: 15px;" value="{{sorular.sik_3}}"onclick="sesese(this.id,this.value)">{{sorular.sik_3}}</button>
+        <button type="button" id="button_4" class="btn btn-block btn-outline-secondary btn-lg" style="max-width: 400px;margin: auto; margin-bottom: 15px;" value="{{sorular.sik_4}}"onclick="sesese(this.id,this.value)">{{sorular.sik_4}}</button>
+      </div>
+      
+      <!-- /.card-body -->
+    </div>
+    <div class="small-box bg-white">
+      <div class="inner">
+        <center><h3 id="bugday_sayisi">0</h3></center>
+        <center><p>Buğday Tanesi</p></center>
+      </div>
+
+
+    </div>
+    <div class="small-box">
+      <a href="https://api.whatsapp.com/send?text=https://www.bugdaybagisla.com Merhaba ben kimsenin bilmediği ama varlığını her zaman hissettirdiği yerdeyim. Sadece boş zamanlarımda kendime yeni bilgiler katmak için soruları cevaplıyorum. Her doğru cevapladığım soru için yardıma muhtaç insanlara 10 buğday tanesi göndermiş oluyorum. Seni de ekibe davet ediyorum. Hoşgeldin. 🤗" target="_blank"><img src="{% static 'bugdaybagisla.com-whatsapp-uzun.jpg' %}" width="100%" alt="buğday bağışla whatsapp paylaş"></a>
+
+
+    </div>
+
+
+
+
+      <div class="mobi">
+      <div class="col-xs-12 col-sm-12  col-md-12 col-lg-12" style="padding-bottom: 20px; ">
+        <div class="position-relative p-3 bg-gray" style="height: 180px; max-width: 400px; margin: auto;">
+          <div class="ribbon-wrapper ribbon-xl">
+            <div class="ribbon bg-warning text-lg">
+              Toplam
+            </div>
+          </div>
+          <small>Buğday:{{ayarlar.toplam}} </small><br>
+          <small>Çözülen soru: {{ayarlar.cozulen_soru}}</small><br>
+          <small>Ziyaretçi: {{ayarlar.toplam_ziyaretci}}</small><br>
+          <small>Soru: {{ayarlar.toplam_soru_sayisi}}</small><br>
+          <small>Kullanıcı: {{toplan_kullanici}}</small>
+        </div>
+      </div>
+      {%if request.session.log%}
+      <div class="col-xs-12 col-sm-12  col-md-12 col-lg-12" style="padding-bottom: 20px; ">
+        <div class="position-relative p-3 bg-gray" style="height: 180px; max-width: 400px; margin: auto;">
+          <div class="ribbon-wrapper ribbon-xl">
+            <div class="ribbon bg-warning text-lg">
+              Üyelik Toplam
+            </div>
+          </div>
+          Scor Tablonuz  <br> <br>
+          <small>Kullanıcı Adı: {%if user%}{{user.nick_name}}{%else%}0{%endif%}</small><br>
+          <small>Buğday: {%if user%}{{user.bugday}}{%else%}0{%endif%}</small><br>
+          <small>Doğru çözülen Soru: {%if user%}{{user.cozulen_soru}}{%else%}0{%endif%}</small><br>
+        </div>
+      </div>
+      {%endif%}
+      <div class="col-xs-12 col-sm-12  col-md-12 col-lg-12" style="padding-bottom: 20px; ">
+        <div class="position-relative p-3 bg-gray" style="height: 180px; max-width: 400px; margin: auto;">
+          <div class="ribbon-wrapper ribbon-xl">
+            <div class="ribbon bg-warning text-lg">
+              Günlük Toplam
+            </div>
+          </div>
+          Günlük <br> <br>
+          <small>Buğday:{{ayarlar.gunluk_toplam}} </small><br>
+          <small>Çözülen soru: {{ayarlar.gunluk_cozulen_soru}}</small><br>
+          <small>Ziyaretçi: {{ayarlar.gunluk_ziyaretci}}</small><br>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  <div class="col-xs-12 col-sm-12  col-md-12 col-lg-4">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12  col-md-12 col-lg-12">
+        <div style="max-width: 400px;margin: auto; padding-bottom: 20px;"><a href="http://www.muhendisbey.xyz"><img src="https://www.moonworkshop.com/img/slider/92b5a4a33db7088f75ffd2478d8b9104.jpg" width="100%" height="auto" alt="Buğday bağışla sponsor 1" ></a></div>
+        <div style="max-width: 400px;margin: auto; padding-bottom: 20px;"><a href="http://www.muhendisbey.xyz"><img src="https://www.moonworkshop.com/img/slider/92b5a4a33db7088f75ffd2478d8b9104.jpg" width="100%" height="auto" alt="Buğday bağışla sponsor 2"></a></div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<script src="{% static 'game-js/kontrol.js' %}"></script>
+
+
+{% endblock %}

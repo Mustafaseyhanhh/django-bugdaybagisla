@@ -1,0 +1,39 @@
+{% extends 'default.html' %}
+{%load staticfiles %}
+{% block content %}
+  <div class="row">
+    {%for i,j in kategoriler %}
+    
+    <div class="col-xs-12 col-sm-12  col-md-12 col-lg-4">
+     <div class="card card-primary card-outline">
+              <div class="card-body box-profile">
+                <div class="text-center">
+                  {% if i.resim %}  
+                  <img class="profile-user-img img-fluid img-circle" src="{{i.resim.url}}" alt="{{i.resim_alt}}" width="150px" height="150px">
+                  {%endif%}
+                </div>
+                
+
+                <h3 class="profile-username text-center">{{i.isim}}</h3>
+
+                <p class="text-muted text-center" style="display:none;">{{i.aciklama}}</p>
+
+                <ul class="list-group list-group-unbordered mb-3">
+                  <li class="list-group-item">
+                    <b>Soru Ekle</b> <a class="float-right">Çok Yakında</a>
+                  </li>
+                  <li class="list-group-item">
+                    <b>Toplam Soru</b> <a class="float-right">{{j}}</a>
+                  </li>
+                </ul>
+
+                <a href="/kategoriler/{{i.id}}" class="btn btn-primary btn-block"><b>Soruları Çöz</b></a>
+              </div>
+              <!-- /.card-body -->
+            </div>
+      </div>
+     
+      {%endfor%}
+      
+    </div>
+  {% endblock %}

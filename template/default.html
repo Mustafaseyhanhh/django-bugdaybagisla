@@ -1,0 +1,294 @@
+{%load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Buğday Bağışla - {{title}}</title>
+    <meta http-equiv="content-language" content="tr">
+    <meta name="content-language" content="tr" />
+    <link rel="shortcut icon" href="{% static 'bugdaytopla.png' %}" />
+    <meta name="author" content="Mustafa SEYHAN, mustafa@muhendisbey.xyz">
+    <meta name="description" content="{{desc}}">
+    <meta property="og:title" content="{{desc}}">
+    <meta name="twitter:card" content="{% static 'bugdaytopla.png' %}" />
+    <meta name="twitter:title" content="Buğday Bağışla" />
+    <meta name="twitter:description" content="{{desc}}" />
+    <meta name="twitter:url" content="https://bugdaybagisla.com" />
+    <meta name="twitter:image" content="{% static '2757133.jpg' %}" />
+    <meta name="keywords" content="yardım,bilgi,bilgi yarışması,yardımlaşma,ortadoğu,oyun,göçmen,mülteci,hak,insan hakları,insan güvenliği,politika,kriz,dünya,ekip,yardım,oyuncu,buğday,bağış,bağışçı,bağış yap,ekonomi,su kuyusu,ilaç yardımı,eğitim yardımı,doğu afrika,fidan bağışı,umut ol,insani yardım,insani destek,genel kultur sorulari,soru bankası,tarih soruları,edebiyat soruları,sorular,yarışma,soru çöz,yardımlaşmak,destek ol,katkıda bulun,eğitim">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'plugins/fontawesome-free/css/all.min.css' %}">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="{% static '/dist/css/adminlte.min.css'%}">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Start Alexa Certify Javascript -->
+<script type="text/javascript">
+_atrk_opts = { atrk_acct:"kirVt1WyR620WR", domain:"bugdaybagisla.com",dynamic: true};
+(function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://certify-js.alexametrics.com/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+</script>
+<noscript><img src="https://certify.alexametrics.com/atrk.gif?account=kirVt1WyR620WR" style="display:none" height="1" width="1" alt="" /></noscript>
+<!-- End Alexa Certify Javascript -->  
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-1562370273474168",
+    enable_page_level_ads: true
+    });
+    </script>
+    <style type="text/css">
+    
+    @media only screen and (max-width: 992px) {
+    .msac {
+    display: none;
+    }
+    .footer-ad-mobile {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    }
+    .main-footer{
+    display: none;
+    }
+    }
+    @media only screen and (min-width: 993px) {
+    .mobi {
+    display: none;
+    }
+    .msac {
+    display: block;
+    }
+    .footer-ad-mobile {
+    display: none;
+    }
+    .main-footer{
+    display: none;
+    }
+    }
+    </style>
+  </head>
+  <body class="hold-transition sidebar-mini sidebar-collapse">
+    <!-- Site wrapper -->
+    <div class="wrapper" >
+      <!-- Navbar -->
+      <nav class="main-header navbar navbar-expand navbar-orange navbar-dark" >
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#" style="color: white;"><i class="fas fa-bars"></i></a>
+          </li>
+          
+        </ul>
+        
+        <!-- SEARCH FORM -->
+        <div class="logo" style="margin:auto;"><a href="/"><img src="{% static 'bugdaytopla.png' %}" alt="Buğday Bağışla Logo" height="70px" weight="auto" ></a></div>
+        <ul class="navbar-nav">
+          {%if request.session.log%}
+          <li class="nav-item">
+            <a href="/cikis" class="nav-link" style="color: white;">Çıkış Yap</a>
+          </li>
+          {%else%}
+          <li class="nav-item">
+            <center><a href="/giris" class="nav-link" style="color: white;">Giriş Yap</a></center>
+            <center><a href="/uye-ol" class="nav-link" style="color: white;"> Üye Ol</a></center>
+            
+            
+          </li>
+
+          {%endif%}
+          
+        </ul>
+      </nav>
+      <!-- /.navbar -->
+      <!-- Main Sidebar Container -->
+      <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background: #fd7e14;">
+        <!-- Brand Logo -->
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <!-- Sidebar user (optional) -->
+          <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+              <a href="/"><img src="{% static 'bugdaytopla.png' %}" class="img-circle elevation-2" alt="Buğday Bağışla Logo" height="auto" weight="auto"></a>
+            </div>
+            <div class="info">
+              <a href="/" class="d-block" style="color: white;">Merhaba {%if user %} {{user.nick_name}}{%endif%}</a>
+            </div>
+          </div>
+          <!-- Sidebar Menu -->
+          <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+              <!-- Add icons to the links using the .nav-icon class
+              with font-awesome or any other icon font library -->
+              <li class="nav-item">
+                <a href="/" class="nav-link">
+                  <i class="fas fa-dice-d20" style="color: white;"></i>
+                  <p style="color: white;">
+                    Oyun
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item" >
+                <a href="/kategoriler" class="nav-link">
+                  <i class="fas fa-tags" style="color: white;"></i>
+                  <p style="color: white;">
+                    Kategoriler
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="fas fa-campground" style="color: white;"></i>
+                  <p style="color: white;">
+                    Gruplar (Yakında)
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/lider-tablosu" class="nav-link">
+                  <i class="fab fa-d-and-d" style="color: white;"></i>
+                  <p style="color: white;">
+                    Lider Tablosu
+                  </p >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/hakkimizda" class="nav-link">
+                  <i class="far fa-address-card" style="color: white;"></i>
+                  <p style="color: white;">
+                    Hakkımızda
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/hakkimizda" class="nav-link">
+                  <i class="fas fa-blog" style="color: white;"></i>
+                  <p style="color: white;">
+                    Blog
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/gizlilik-sozlesmesi" class="nav-link">
+                  <i class="fas fa-file-signature" style="color: white;"></i>
+                  <p style="color: white;">
+                    Gizlilik Sözleşmesi
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/uyelik-sozlesmesi" class="nav-link">
+                  <i class="fas fa-file-signature" style="color: white;"></i>
+                  <p style="color: white;">
+                    Üyelik Sözleşmesi
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/random-soru" class="nav-link">
+                  <i class="fas fa-random" style="color: white;"></i>
+                  <p style="color: white;">
+                    Soru - Cevap
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/iletisim" class="nav-link">
+                  <i class="far fa-envelope-open" style="color: white;"></i>
+                  <p style="color: white;">
+                    İletişim
+                  </p>
+                </a>
+              </li>
+              
+              <br>
+              
+              <li class="nav-item">
+                <a href="https://api.whatsapp.com/send?text=https://www.bugdaybagisla.com Merhaba ben kimsenin bilmediği ama varlığını her zaman hissettirdiği yerdeyim. Sadece boş zamanlarımda kendime yeni bilgiler katmak için soruları cevaplıyorum. Her doğru cevapladığım soru için yardıma muhtaç insanlara 10 buğday tanesi göndermiş oluyorum. Seni de ekibe davet ediyorum. Hoşgeldin. 🤗" target="_blank" class="nav-link">
+                  <img src="{% static 'bugdaybagisla.com-whatsapp-kare.jpg' %}" width="100%" height="auto" alt="buğday bağışla com whatsapp">
+                </a>
+              </li>
+              
+            </ul>
+          </nav>
+          <!-- /.sidebar-menu -->
+        </div>
+        <!-- /.sidebar -->
+      </aside>
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper" style="background-image: url('{% static '2757133.jpg' %}'); background-attachment: fixed; background-repeat: no-repeat; background-size: cover;">
+        <!-- Content Header (Page header) -->
+        <!-- Main content -->
+        <section class="content" style="padding-top: 20px;">
+          
+          {% block content %}
+          {% endblock %}
+        </section>
+        <!-- /.content -->
+      </div>
+      <!-- /.content-wrapper -->
+      <div class="footer-ad-mobile"><a href="https://api.whatsapp.com/send?text=https://www.bugdaybagisla.com Merhaba ben kimsenin bilmediği ama varlığını her zaman hissettirdiği yerdeyim. Sadece boş zamanlarımda kendime yeni bilgiler katmak için soruları cevaplıyorum. Her doğru cevapladığım soru için yardıma muhtaç insanlara 10 buğday tanesi göndermiş oluyorum. Seni de ekibe davet ediyorum. Hoşgeldin. 🤗"><img src="{% static 'bugdaybagisla.com-whatsapp-uzun.jpg' %}" width="100%" height="auto" alt="buğday bağışla whatsapp paylaş"></a></div>
+      <footer class="main-footer">
+        <div class="float-right d-none d-sm-block">
+          <b>Version</b> 3.0.0
+        </div>
+        <strong>Copyright &copy; 2019-2019 <a href="https://bugdaybagisla.com">bugdaybagisla.com</a>.</strong> All rights
+        reserved.
+        <h1 style="display: none;">Buğday Bağışla</h1>
+        <h2 style="display: none;">Buğday Bağışla</h2>
+        <h3 style="display: none;">Buğday Bağışla</h3>
+        <h4 style="display: none;">Buğday Bağışla</h4>
+      </footer>
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+      </aside>
+      <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+    <!-- jQuery -->
+    <script src="{% static 'plugins/jquery/jquery.min.js'%}"></script>
+    <!-- Bootstrap 4 -->
+    <script src="{% static 'plugins/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+    <!-- AdminLTE App -->
+    <script src="{% static 'dist/js/adminlte.min.js'%}"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="{% static 'dist/js/demo.js'%}"></script>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+        
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <center><h4 class="modal-title">Buğday Bağışla Nedir</h4></center>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <center><p>Amacımız insanların birbirlerine farklı yollarla yardım edebilmesini sağlamaktır. <br>Doğru cevapladığınız her soru için 10 buğday bedelince yardım sizin adınıza muhtaç bir aileye gonderilecektir.<br>Duyarlılığınızdan dolayı Teşekkür Ederiz...<br>Daha ayrıntılı bilgi için hakkımızda sayfasını inceleyebilirsiniz.</p></center>
+          </div>
+          <div class="modal-footer justify-content-between">
+            <button type="button" class="btn btn-warning" data-dismiss="modal">Oyuna Başla</button>
+            <a href="/hakkimizda"><button type="button" class="btn btn-success">Hakkımızda</button></a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+  <script type="text/javascript">
+      if (sessionStorage.getItem("controlID") == 0) {
+          console.log(sessionStorage.getItem("controlID"));
+      }else{
+        console.log("****");
+            sessionStorage.setItem("controlID","0");
+            $('#myModal').modal('show');
+      }
+  </script>
+</body>
+</html>
+<!-- https://api.whatsapp.com/send?text=buraya tıkla gel www.google.com-->

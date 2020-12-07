@@ -1,0 +1,75 @@
+{% extends 'default.html' %}
+
+{%load staticfiles %}
+{% block content %}
+
+
+<div class="row">
+  <div class="col-xs-12 col-sm-12  col-md-12 col-lg-4 msac">
+
+  </div>
+  <div class="col-xs-12 col-sm-12  col-md-12 col-lg-4">
+    {%if ok == 1%}
+      <div class="alert alert-success alert-dismissible" >
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <h5><i class="icon fas fa-ban"></i> İletildi!</h5>
+        İletiniz başarı ile gönderilmiştir. Ekibimiz en kısa sürede size geri dönüş sağlayacaktır.
+      </div>
+      {%endif%}
+   <div class="card">
+    <div class="card-body login-card-body">
+      <p class="login-box-msg">Bizimle iletişime geçmek için bu formu kullanabilir yada iletisim@bugdaybagisla.com adresine mail gönderebilirsiniz. Cevabınız soru sorarken kullanmış olduğunuz mail adresine iletilecektir.</p>
+
+      <form action="/iletisim-form" method="post">{% csrf_token %}
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Kullanıcı Adı" required="" name="kadi">
+          <div class="input-group-append">
+            <div class="input-group-text">
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Konu Başlığı" required="" name="kbasi">
+          <div class="input-group-append">
+            <div class="input-group-text">
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <textarea class="form-control" rows="3" placeholder="Konu İçeriği Max 500 Karakter" required="" name="kicerik"></textarea>
+        </div>
+        <div class="row">
+
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary btn-block">Gönder</button>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
+
+
+
+
+    </div>
+    <!-- /.login-card-body -->
+  </div>
+    
+  </div>
+  <div class="col-xs-12 col-sm-12  col-md-12 col-lg-4">
+
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
